@@ -13,14 +13,15 @@ public class PagoService {
     private final List<PagoDTO> listaPagos = new ArrayList<>();
     private final Map<Long, Long> clientesPorPedido = new HashMap<>();
     public PagoService() {
-        registrarPago(1L, 101L, 10L, "TARJETA_CREDITO",
-                250.00, "AUT001", "APROBADO");
-        registrarPago(2L, 102L, 10L, "TRANSFERENCIA",
-                150.00, "AUT002", "APROBADO");
+        registrarPago(1L, 1L, 10L, "TARJETA_CREDITO",
+                130.00, "AUT001", "APROBADO");
+
+        registrarPago(2L, 2L, 10L, "TRANSFERENCIA",
+                450.00, "AUT002", "APROBADO");
+
         registrarPago(3L, 103L, 20L, "TARJETA_CREDITO",
                 300.00, "AUT003", "RECHAZADO");
     }
-
     private void registrarPago(Long idPago, Long idPedido, Long clienteId,
                                String metodoPago, Double montoPagado,
                                String codigoAutorizacion, String estadoPago) {
